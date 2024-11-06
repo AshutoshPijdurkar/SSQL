@@ -1,0 +1,54 @@
+--Create Database  AIASL
+
+use AIASL;
+-- Creating a table
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName NVARCHAR(50),
+    LastName NVARCHAR(50),
+    Position NVARCHAR(50),
+    Salary DECIMAL(10, 2)
+);
+go
+
+-- InsertingData
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Position, Salary)
+VALUES (1, 'John', 'Doe', 'Manager', 75000.00);
+
+-- SelectingData
+SELECT * FROM Employees WHERE Salary > 50000;
+
+-- UpdatingData
+UPDATE Employees SET Salary = Salary + 5000 WHERE EmployeeID = 1;
+
+-- DeletingData
+DELETE FROM Employees WHERE EmployeeID = 1;
+
+
+************  DDL  ***************
+
+1 -------------CreatE ------------
+
+      1--- CreateBadabaseAIASL 
+
+      2--- CreatetableEmployees
+ 
+2 ------------- ALTER ------------
+
+      1--- ALTERTABLEEmployees
+           ADD DateOfBirth DATE;
+
+      2--- ALTERTABLEEmployees
+           ALTER COLUMN Position NVARCHAR(100);    (Modifying an Existing Column as per Required)
+
+3 ------------- DROP ------------
+
+      1--- DROPtABLEEmployees;
+
+      2--- ALTERTABLEEmployees                      (Drop anExistingColumn as perRequired)
+           Drop COLUMN Position;
+
+      3--- DROPDatabaseAIASL;
+
+
+
